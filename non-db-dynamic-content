@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home</title>
+		<meta charset"UTF-8">
+		<meta name="description" content="">
+		<meta name="author" content="Andrew Cole">
+		<meta name="keywords" content="">
+		
+		<link href="http://abcole.me/mock-up_1/css/Styles.css" type="text/css" rel="stylesheet">
+		<link href="http://abcole.me/mock-up_1/css/nav.css" type="text/css" rel="stylesheet">
+		<?php
+				if (isset($_GET['content'])) {
+				  $content = $_GET['content'];
+				} else {
+				  $content = 'index.php';
+				}
+		?>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<div id="logo">
+					<img src="http://abcole.me/mock-up_1/images/portersandwaitersclubtoken.png" alt="porters and waiters clubtoken" height="145px" width="145px">
+				</div>
+				<div id="title">
+					<h1></h1>
+					<h3></h3>
+					<h2></h2>
+				</div>
+			</header>
+			<div id="content">
+			<div id="left">
+					<nav>
+						<ul>
+							<li><a href="http://localhost/index.php/?content=joe.php">About Joe</a></li>
+							<li id="hover-about">
+								<a href="http://localhost/index.php/?content=about.php">About Us</a>
+								<ul id="about">
+									<li><a href="http://localhost/index.php/?content=index.php">The Institute</a></li>
+									<li><a href="http://localhost/index.php/?content=staff.php">The Staff</a></li>
+									<li><a href="http://localhost/index.php/?content=board.php">The Board</a></li>
+								</ul>
+							</li>
+							<li id="hover-submit">
+								<a href="http://localhost/mcqueen/?content=contact.php">Contact Us</a>
+								<ul id="submit">
+									<li><a href="http://localhost/index.php/?content=film.php">Submit a Film</a></li>
+									<li><a href="http://localhost/index.php/?content=song.php">Submit a Song</a></li>
+									<li><a href="http://localhost/index.php/?content=mail.php">Mail an entry in</a></li>
+								</ul>
+							</li>
+							<li><a href="http://localhost/index.php/?content=sponsor.php">Sponsors</a></li>
+							<li><a href="http://localhost/index.php/?content=articles.php">Articles</a></li>
+						</ul>
+					</nav>
+					<div id="podcast">
+						<p>Download the most recent podcast here: <a href="#">Live_on_radio.mp3</a></p>
+						<p>(<a href="podcast.html">Archive Here!</a>)</p>
+					</div>
+					<div id="merchandise">
+						<img src="images/blank-mug.jpg" alt="Mug">
+					</div>
+				</div>
+				<div id="main-content">
+					<?php include "./content/$content" ?>
+				</div>
+			</div>
+			</div>
+		<footer>
+			<div id="contact">
+				<p>PoBox 12984<br> Ogden<br> Utah<br> 84412</p>
+				<p class="contact">Email: <a href="mailto:joe@example.com?subject=feedback">MJFI@MCQJFF.ORG</a></p>
+				<p class="contact">Phone: 1-801-123-456</p>
+			</div>
+			<div id="legal">
+				<p>&#169;McQueen Jazz Film Institute 2014</p>
+				<p>Site developed and maintained by: <a href="http://abcole.me/mock-up_1">McQueen Jazz Film Festival Institute</a></p>
+			</div>
+		</footer>
+	</body>	
+</html>
