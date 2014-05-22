@@ -1,3 +1,5 @@
+/* this is a simple CMS that doesn't use a database */
+/* you can cut the header, nav and footer out and use php to replace them back in */
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -31,6 +33,7 @@
 			</header>
 			<div id="content">
 			<div id="left">
+				/*you need to ensure the information after ?content= is teh correct file to be used when the link is clicked */
 					<nav>
 						<ul>
 							<li><a href="http://localhost/index.php/?content=joe.php">About Joe</a></li>
@@ -63,6 +66,7 @@
 					</div>
 				</div>
 				<div id="main-content">
+					/* this is where the content is pulled when the link is clicked */
 					<?php include "./content/$content" ?>
 				</div>
 			</div>
